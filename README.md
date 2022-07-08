@@ -47,18 +47,12 @@ The p-value from lot 3 is below the significance level of 0.05% and therefore we
 
 ## Study Design: MechaCar vs Competition
 
-In your description, address the following questions:
-What metric or metrics are you going to test?
-What is the null hypothesis or alternative hypothesis?
-What statistical test would you use to test the hypothesis? And why?
-What data is needed to run the statistical test?
+A statistical study that can quantify how the MechaCar performs against the competition would be a study that compares the MechaCars city and highway fuel efficiency with other vehicles in its class.
 
-A statistical study that can quantify how the MechaCar performs against the competition would be a study that compares the MechaCars city and highway fuel efficiency and safety rating with other vehicles in its class.
+The alternative hypothesis would be if the MechaCar is a superior performance car, then it will have better city and highway fuel efficiency than other vehicles in its class. 
 
-The alternative hypothesis would be if the MechaCar is a superior performance car, then it will have better fuel efficiency and higher safety ratings than other vehicles in its class. 
+The null hypothesis would be if the MechaCar is not a superior performance car, then it does not have better city and highway fuel efficiency than other vehicles in its class.
 
-The null hypothesis would be if the MechaCar is not a superior performance car, then it does not have better fuel efficiency or higher safety ratings than other vehicles in its class.
+The statistical test that would be performed to test the hypothesis would be an ANOVA test for city mpg and and ANOVA test for highway mpg. This is because we would be comparing the mean mpg across multiple cars to determine if there is a significant difference between the samples.
 
-The statistical test that would be performed to test the hypothesis would be 
-
-The data needed to run the statistical test would be the city and highway mpg and the safety rating for each vehicle being compared.
+The data needed to run the statistical test would be the make/model of each car, and the city and highway mpg for each vehicle being compared.
