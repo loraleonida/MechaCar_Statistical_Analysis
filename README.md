@@ -3,7 +3,7 @@
 ## Linear Regression to Predict MPG
 
 - Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
-  - The variables that provide a non-random amount of variance to the mpg values are vehicle weight, spoiler angle, and AWD. This is determined by their Pr(>|t|) value. Vehicle weight, spoiler angle, and AWD have probabilities of 0.078, 0.31, and 0.18 respectively- indicating that they are statistically unlikely to provide random amounts of variance to the mpg values.
+  - The variables that provided a non-random amount of variance to the mpg values are vehicle weight, spoiler angle, and AWD. This is determined by their Pr(>|t|) value. Vehicle weight, spoiler angle, and AWD have probabilities of 0.078, 0.31, and 0.18 respectively- indicating that they are statistically unlikely to provide random amounts of variance to the mpg values.
 
 - Is the slope of the linear model considered to be zero? Why or why not?
   - The slope of the linear model is not considered to be zero because the p-value is 5.35e-11, which is much smaller than the assumed level of significance of 0.05%. Therefore we can reject the null hypothesis, which means the slope of the model is not zero.
@@ -15,7 +15,7 @@
 
 ## Summary Statistics on Suspension Coils
 
-The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. The variance of all manufacturing lots is 62.29 and therefore meets the design specifications. 
+The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. The variance of all the manufacturing lots is 62.29 and therefore meets the design specifications. 
 
 <img width="350" alt="Screen Shot 2022-07-03 at 8 50 15 PM" src="https://user-images.githubusercontent.com/101693004/177933465-3e66c80e-cec2-4de0-86cc-b3eabdddf57a.png">
 
@@ -33,8 +33,8 @@ The p-value results of the t-test are as follows:
 - Lot 2 p-value: 0.61
 - Lot 3 p-value: 0.04
 
-For all the lots together, and the individual lots 1 and 2, the p-value is above the significance level of 0.05% and therefore we cannot reject the null hypothesis. This indicated the means from these 3 are statistically similar to the population mean of 1,500.
-The p-value from lot 3 is below the significance level of 0.05% and therefore we can reject the null hypothesis. This indicates the mean of lot 3 is are statistically different from the population mean of 1,500.
+For all the lots together, and the individual lots 1 and 2, the p-value is above the significance level of 0.05% and therefore we cannot reject the null hypothesis. This indicates that the means from these 3 are statistically similar to the population mean of 1,500.
+The p-value from lot 3 is below the significance level of 0.05% and therefore we can reject the null hypothesis. This indicates that the mean of lot 3 is statistically different from the population mean of 1,500.
 
 <img width="421" alt="Screen Shot 2022-07-04 at 4 06 54 PM" src="https://user-images.githubusercontent.com/101693004/177933639-c336c178-448e-48dd-b0ee-7a267d6ce7ee.png">
 
@@ -49,10 +49,10 @@ The p-value from lot 3 is below the significance level of 0.05% and therefore we
 
 A statistical study that can quantify how the MechaCar performs against the competition would be a study that compares the MechaCars city and highway fuel efficiency with other vehicles in its class.
 
-The alternative hypothesis would be if the MechaCar is a superior performance car, then it will have better city and highway fuel efficiency than other vehicles in its class. 
+The alternative hypothesis would be if the MechaCar has better city and highway fuel efficiency than other vehicles in its class, then it is a superior performance car.
 
-The null hypothesis would be if the MechaCar is not a superior performance car, then it does not have better city and highway fuel efficiency than other vehicles in its class.
+The null hypothesis would be if the MechaCar does not have better city and highway fuel efficiency than other vehicles in its class, then it is not a superior performance car.
 
-The statistical test that would be performed to test the hypothesis would be an ANOVA test for city mpg and and ANOVA test for highway mpg. This is because we would be comparing the mean mpg across multiple cars to determine if there is a significant difference between the samples.
+The statistical test performed to test this hypothesis would be an ANOVA test for city mpg and an ANOVA test for highway mpg. This is because we would be comparing the mpg means across multiple car make/models to determine if there is a significant difference between the samples.
 
 The data needed to run the statistical test would be the make/model of each car, and the city and highway mpg for each vehicle being compared.
