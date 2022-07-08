@@ -1,0 +1,63 @@
+#Import dplyr library
+```{r}
+library(tidyverse)
+```
+
+#Import and read MechaCar_mgp.csv
+```{r}
+MechaCar_mpg <- read.csv('MechaCar_mpg.csv',check.names = F,stringsAsFactors = F)
+
+head(MechaCar_mpg)
+```
+
+#Perform linear regression on all six variables from MechaCar_mpg dataframe
+```{r}
+lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + 
+     AWD,data=MechaCar_mpg)
+```
+
+#Use summary() to determine p-value and r-squared value
+```{r}
+summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data=MechaCar_mpg))
+```
+
+#Import and read in Suspension_Coil.csv
+```{r}
+Suspension_Coil <- read.csv('Suspension_Coil.csv',check.names = F,stringsAsFactors = F)
+
+head(Suspension_Coil)
+```
+
+#Use summarize() to get mean, median, variance, and standard deviation of PSI column
+```{r}
+total_summary <- Suspension_Coil %>% summarize(Mean= mean(PSI), Median= median(PSI), Variance= var(PSI), SD= sd(PSI), .groups = 'keep')
+```
+
+#Use group_by() and summarize() to group each lot by the above summary statistics for the PSI column
+```{r}
+lot_summary <- Suspension_Coil %>% group_by(Manufacturing_Lot) %>% summarize(Mean= mean(PSI), Median= median(PSI), Variance= var(PSI), SD= sd(PSI), .groups = 'keep')
+```
+
+#Use t.test() to determine if the PSI across all manufacturing lots is statistically different from the population mean of 1,500 pounds per square inch
+```{r}
+t.test(x= Suspension_Coil$PSI, mu= 1500)
+```
+
+#Use t.test() and subset() to write 3 more RScripts to determine if the PSI for each manufacturing lot is statistically different from the population mean of 1,500 pounds per square inch
+```{r}
+Lot1_Subset <- subset(Suspension_Coil, Manufacturing_Lot == "Lot1")
+
+t.test(x= Lot1_Subset$PSI, mu= 1500)
+```
+```{r}
+Lot2_Subset <- subset(Suspension_Coil, Manufacturing_Lot == "Lot2")
+
+t.test(x= Lot2_Subset$PSI, mu= 1500)
+```
+
+```{r}
+Lot3_Subset <- subset(Suspension_Coil, Manufacturing_Lot == "Lot3")
+
+t.test(x= Lot3_Subset$PSI, mu= 1500)
+```
+
